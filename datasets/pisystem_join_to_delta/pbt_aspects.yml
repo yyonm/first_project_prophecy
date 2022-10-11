@@ -16,7 +16,7 @@ schema:
       description: ''
       mappings: []
       tags: []
-  - name: tag
+  - name: tag_landing
     type: string
     nullable: true
     metadata:
