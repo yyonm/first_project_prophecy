@@ -7,9 +7,11 @@ from prophecy.utils import *
 from pipeline_1.graph import *
 
 def pipeline(spark: SparkSession) -> None:
+    optimize_refined_jigsaw(spark)
     df_jigsaw_mdt = jigsaw_mdt(spark)
-    df_Reformat_1 = Reformat_1(spark, df_jigsaw_mdt)
-    DeltaTableOperations_1(spark)
+    df_reformat_tiempo_vacio = reformat_tiempo_vacio(spark, df_jigsaw_mdt)
+    df_pisystem_landing = pisystem_landing(spark)
+    df_Deduplicate_1 = Deduplicate_1(spark, df_pisystem_landing)
 
 def main():
     spark = SparkSession.builder\

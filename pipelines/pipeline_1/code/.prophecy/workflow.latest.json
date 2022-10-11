@@ -43,16 +43,64 @@
     "sourcePort" : "K8XFhdKatRdsidOGVB2P1$$CHnuZexwDrkGvdIY_IBDy",
     "target" : "VX3ptB8F295W44vBDSb0f$$xhy_VPWOHlXed_Es5o0rw",
     "targetPort" : "0l5bEteDJK9FKR6zqYX62$$2Qy-FI77TXDqsxpoCrUJo"
+  }, {
+    "id" : "lprngX4J6vF5u9Ed_89lZ",
+    "source" : "Wv2lfVPevUII6N-IqN9Z9$$oOWTQRp0-A0JVNETuQTx8",
+    "sourcePort" : "RPCT4MhpfeSGY69VwVjlD$$G5fiFR2yGwjgJhzZf555k",
+    "target" : "zAm5FTyATNy8NiudI0lfc$$Mh3JvEMofykPqI17gCUfL",
+    "targetPort" : "HcVFK_Ox7YRMKWXUdp5kw$$f3Y0A3czG1Qe2JqOutF4d"
   } ],
   "processes" : {
+    "6nYJTn19bVqbkOcn1dWjW$$JFL4qNeEnulw-A1scEpMv" : {
+      "id" : "6nYJTn19bVqbkOcn1dWjW$$JFL4qNeEnulw-A1scEpMv",
+      "component" : "DeltaTableOperations",
+      "metadata" : {
+        "label" : "optimize_refined_jigsaw",
+        "slug" : "optimize_refined_jigsaw",
+        "x" : -302.8000000000002,
+        "y" : 184.00000000000006,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "database" : "dmh_minco",
+        "path" : "dbfs:/mnt/refined/dmh/operaciones/jigsaw/vistas/var_agg_1_hr/OUT",
+        "updateCondition" : null,
+        "restoreValue" : null,
+        "vaccumRetainNumHours" : null,
+        "useOptimiseZOrder" : true,
+        "tableName" : "table_refined_jigsaw",
+        "restoreVia" : null,
+        "optimiseWhere" : null,
+        "updateTableExpressions" : [ ],
+        "useExternalFilePath" : false,
+        "deleteCondition" : {
+          "format" : "sql",
+          "expression" : "true"
+        },
+        "optimiseZOrderColumns" : [ {
+          "colName" : "tiempo_vacio"
+        } ],
+        "useOptimiseWhere" : false,
+        "action" : "optimiseTable"
+      }
+    },
     "VX3ptB8F295W44vBDSb0f$$xhy_VPWOHlXed_Es5o0rw" : {
       "id" : "VX3ptB8F295W44vBDSb0f$$xhy_VPWOHlXed_Es5o0rw",
       "component" : "Reformat",
       "metadata" : {
-        "label" : "Reformat_1",
-        "slug" : "Reformat_1",
-        "x" : 280,
-        "y" : 160,
+        "label" : "reformat_tiempo_vacio",
+        "slug" : "reformat_tiempo_vacio",
+        "x" : -113.60000000000002,
+        "y" : 5.200000000000017,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -85,14 +133,40 @@
         "columnsSelector" : [ "0l5bEteDJK9FKR6zqYX62$$2Qy-FI77TXDqsxpoCrUJo##tiempo_vacio" ]
       }
     },
+    "Wv2lfVPevUII6N-IqN9Z9$$oOWTQRp0-A0JVNETuQTx8" : {
+      "id" : "Wv2lfVPevUII6N-IqN9Z9$$oOWTQRp0-A0JVNETuQTx8",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "pisystem_landing",
+        "slug" : "pisystem_landing",
+        "x" : -308.19999999999993,
+        "y" : -142.79999999999993,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "RPCT4MhpfeSGY69VwVjlD$$G5fiFR2yGwjgJhzZf555k",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "3633/datasets/pisystem_landing"
+      }
+    },
     "dCXcYWDQbz1pf7uhvF26J$$dkZ1ux3LA9DedjwvYtwkl" : {
       "id" : "dCXcYWDQbz1pf7uhvF26J$$dkZ1ux3LA9DedjwvYtwkl",
       "component" : "Source",
       "metadata" : {
         "label" : "jigsaw_mdt",
         "slug" : "jigsaw_mdt",
-        "x" : 62,
-        "y" : 184,
+        "x" : -301.6,
+        "y" : 11.200000000000017,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -111,46 +185,39 @@
         "datasetId" : "3633/datasets/jigsaw_mdt"
       }
     },
-    "6nYJTn19bVqbkOcn1dWjW$$JFL4qNeEnulw-A1scEpMv" : {
-      "id" : "6nYJTn19bVqbkOcn1dWjW$$JFL4qNeEnulw-A1scEpMv",
-      "component" : "DeltaTableOperations",
+    "zAm5FTyATNy8NiudI0lfc$$Mh3JvEMofykPqI17gCUfL" : {
+      "id" : "zAm5FTyATNy8NiudI0lfc$$Mh3JvEMofykPqI17gCUfL",
+      "component" : "Deduplicate",
       "metadata" : {
-        "label" : "DeltaTableOperations_1",
-        "slug" : "DeltaTableOperations_1",
-        "x" : 303.1999999999998,
-        "y" : 321.99999999999994,
+        "label" : "Deduplicate_1",
+        "slug" : "Deduplicate_1",
+        "x" : -142.2,
+        "y" : -133.59999999999997,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false
       },
       "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ ],
+        "inputs" : [ {
+          "id" : "HcVFK_Ox7YRMKWXUdp5kw$$f3Y0A3czG1Qe2JqOutF4d",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "YEB2lFSNzQJUQ78m0UbM1$$9X2-ecxlBPj5_XX-CiCR5",
+          "slug" : "out"
+        } ],
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "database" : "",
-        "path" : "dbfs:/mnt/refined/dmh/operaciones/jigsaw/vistas/var_agg_1_hr/OUT",
-        "updateCondition" : null,
-        "restoreValue" : null,
-        "vaccumRetainNumHours" : null,
-        "useOptimiseZOrder" : true,
-        "tableName" : "",
-        "restoreVia" : null,
-        "optimiseWhere" : null,
-        "updateTableExpressions" : [ ],
-        "useExternalFilePath" : true,
-        "deleteCondition" : {
-          "format" : "sql",
-          "expression" : "true"
-        },
-        "optimiseZOrderColumns" : [ {
-          "colName" : "tiempo_vacio"
+        "dedupColumns" : [ {
+          "colName" : "tag"
         } ],
-        "useOptimiseWhere" : false,
-        "action" : "optimiseTable"
+        "dedupType" : "unique_only",
+        "columnsSelector" : [ "HcVFK_Ox7YRMKWXUdp5kw$$f3Y0A3czG1Qe2JqOutF4d##tag" ],
+        "orders" : [ ],
+        "useOrderBy" : false
       }
     }
   },
