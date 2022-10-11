@@ -73,10 +73,10 @@
       "properties" : {
         "importLanguage" : "python",
         "expressions" : [ {
-          "target" : "tiempo_vacio",
+          "target" : "tiempo_vacio_ts",
           "expression" : {
             "format" : "sql",
-            "expression" : "to_timestamp(tiempo_vacio, 'yyyy-mm-dd HH:mm:ss')"
+            "expression" : "to_timestamp(tiempo_vacio, 'yyyy-MM-dd HH:mm:ss')"
           },
           "description" : ""
         } ],
