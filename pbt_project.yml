@@ -17,7 +17,8 @@ pipelines:
       - 3633/datasets/jigsaw_mdt
       - 3633/datasets/pisystem_landing
       - 3633/datasets/diccionario
-      outputs: []
+      outputs:
+      - 3633/datasets/pisystem_join_to_delta
     dependencies: {}
 datasets:
   datasets/jigsaw_mdt:
@@ -56,6 +57,18 @@ datasets:
         description: ''
         author: yuan.yon@gmail.com
         createdAt: '2022-10-11 18:57:16'
+  datasets/pisystem_join_to_delta:
+    name: pisystem_join_to_delta
+    description: ''
+    author: yuan.yon@gmail.com
+    createdAt: '2022-10-11 19:18:45'
+    physicalDatasets:
+      dev-databricks-codelco:
+        fabricId: 1084
+        datasetType: File
+        description: ''
+        author: yuan.yon@gmail.com
+        createdAt: '2022-10-11 19:18:45'
 templates: {}
 jobs: {}
 libraries: []

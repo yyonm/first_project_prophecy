@@ -55,6 +55,24 @@
     "sourcePort" : "4UtoHngomuVaXtj6NAteA$$f_Qq1adTo20NCntRZgmy8",
     "target" : "fcDi0XPmfPiJ22QYjau1G$$wtmPYYujtN91g4K1eutKY",
     "targetPort" : "-1-3KPSFUHyHThEHNXTIc$$jFeBemrT8SpzS6Xgbn2Mk"
+  }, {
+    "id" : "SIdlwTRY4OBej5Q8xtmVA",
+    "source" : "zAm5FTyATNy8NiudI0lfc$$Mh3JvEMofykPqI17gCUfL",
+    "sourcePort" : "YEB2lFSNzQJUQ78m0UbM1$$9X2-ecxlBPj5_XX-CiCR5",
+    "target" : "R8-eGC0LbiE7Mjno_TGY2$$5_e9RJD28GHvZgLEcaYhm",
+    "targetPort" : "_xbmqVULimoff2pmq5Yif$$sotuGYSGe4sCVeAYDUv87"
+  }, {
+    "id" : "UF1tsWOPZeCty7bCJGBya",
+    "source" : "fcDi0XPmfPiJ22QYjau1G$$wtmPYYujtN91g4K1eutKY",
+    "sourcePort" : "GdqmiBe8at9MUUL20yDBi$$09XAyT0G6O5xhk-UQWXYx",
+    "target" : "R8-eGC0LbiE7Mjno_TGY2$$5_e9RJD28GHvZgLEcaYhm",
+    "targetPort" : "trzJbagmFDDkKf1uQRDHc$$Djoxk2Y2hdky4ZCbC4WLU"
+  }, {
+    "id" : "2gw0-MdS8Duj49ECB5QQt",
+    "source" : "R8-eGC0LbiE7Mjno_TGY2$$5_e9RJD28GHvZgLEcaYhm",
+    "sourcePort" : "EXzvg-11ph8VE_9vvzov2$$RIZOJRir-1CrYZmTsQs0I",
+    "target" : "3sMI0gq6CVOvRUjvDrcJz$$0Tpt3JuFr5rW-rOzmYgvQ",
+    "targetPort" : "QHGoq2O4ALtQPVc_aNX13$$bpl4r9wscbPN_F6PuVap7"
   } ],
   "processes" : {
     "6nYJTn19bVqbkOcn1dWjW$$JFL4qNeEnulw-A1scEpMv" : {
@@ -139,14 +157,71 @@
         "columnsSelector" : [ "0l5bEteDJK9FKR6zqYX62$$2Qy-FI77TXDqsxpoCrUJo##tiempo_vacio" ]
       }
     },
+    "R8-eGC0LbiE7Mjno_TGY2$$5_e9RJD28GHvZgLEcaYhm" : {
+      "id" : "R8-eGC0LbiE7Mjno_TGY2$$5_e9RJD28GHvZgLEcaYhm",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "Join_1",
+        "slug" : "Join_1",
+        "x" : 68.27500000000043,
+        "y" : -210.00000000000006,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "trzJbagmFDDkKf1uQRDHc$$Djoxk2Y2hdky4ZCbC4WLU",
+          "slug" : "in0"
+        }, {
+          "id" : "_xbmqVULimoff2pmq5Yif$$sotuGYSGe4sCVeAYDUv87",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "EXzvg-11ph8VE_9vvzov2$$RIZOJRir-1CrYZmTsQs0I",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "in0.tag == in1.tag"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ ],
+        "hints" : [ {
+          "id" : "trzJbagmFDDkKf1uQRDHc$$Djoxk2Y2hdky4ZCbC4WLU",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "_xbmqVULimoff2pmq5Yif$$sotuGYSGe4sCVeAYDUv87",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "conditions",
+        "columnsSelector" : [ "_xbmqVULimoff2pmq5Yif$$sotuGYSGe4sCVeAYDUv87##tag", "trzJbagmFDDkKf1uQRDHc$$Djoxk2Y2hdky4ZCbC4WLU##tag" ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "in0"
+      }
+    },
     "fcDi0XPmfPiJ22QYjau1G$$wtmPYYujtN91g4K1eutKY" : {
       "id" : "fcDi0XPmfPiJ22QYjau1G$$wtmPYYujtN91g4K1eutKY",
       "component" : "Filter",
       "metadata" : {
         "label" : "Filter_1",
         "slug" : "Filter_1",
-        "x" : -1250.5249999999999,
-        "y" : -215.99999999999991,
+        "x" : -153.72499999999985,
+        "y" : -310.79999999999995,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -224,14 +299,40 @@
         "datasetId" : "3633/datasets/jigsaw_mdt"
       }
     },
+    "3sMI0gq6CVOvRUjvDrcJz$$0Tpt3JuFr5rW-rOzmYgvQ" : {
+      "id" : "3sMI0gq6CVOvRUjvDrcJz$$0Tpt3JuFr5rW-rOzmYgvQ",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "pisystem_join_to_delta",
+        "slug" : "pisystem_join_to_delta",
+        "x" : 290.2750000000003,
+        "y" : -190.80000000000004,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "QHGoq2O4ALtQPVc_aNX13$$bpl4r9wscbPN_F6PuVap7",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "3633/datasets/pisystem_join_to_delta"
+      }
+    },
     "feNwb3T5sHZa63uQSlIEg$$vBntB-Kj811lCxtmG1cRq" : {
       "id" : "feNwb3T5sHZa63uQSlIEg$$vBntB-Kj811lCxtmG1cRq",
       "component" : "Source",
       "metadata" : {
         "label" : "diccionario",
         "slug" : "diccionario",
-        "x" : -1452.25,
-        "y" : -298.7999999999999,
+        "x" : -312.25,
+        "y" : -313.19999999999993,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
