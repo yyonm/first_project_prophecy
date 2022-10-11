@@ -10,6 +10,8 @@ def pipeline(spark: SparkSession) -> None:
     optimize_refined_jigsaw(spark)
     df_jigsaw_mdt = jigsaw_mdt(spark)
     df_reformat_tiempo_vacio = reformat_tiempo_vacio(spark, df_jigsaw_mdt)
+    df_diccionario = diccionario(spark)
+    df_Filter_1 = Filter_1(spark, df_diccionario)
     df_pisystem_landing = pisystem_landing(spark)
     df_Deduplicate_1 = Deduplicate_1(spark, df_pisystem_landing)
 

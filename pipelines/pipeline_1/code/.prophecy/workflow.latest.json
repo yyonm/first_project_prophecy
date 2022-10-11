@@ -49,6 +49,12 @@
     "sourcePort" : "RPCT4MhpfeSGY69VwVjlD$$G5fiFR2yGwjgJhzZf555k",
     "target" : "zAm5FTyATNy8NiudI0lfc$$Mh3JvEMofykPqI17gCUfL",
     "targetPort" : "HcVFK_Ox7YRMKWXUdp5kw$$f3Y0A3czG1Qe2JqOutF4d"
+  }, {
+    "id" : "tWqyUC6xHsXPwftjfNhNd",
+    "source" : "feNwb3T5sHZa63uQSlIEg$$vBntB-Kj811lCxtmG1cRq",
+    "sourcePort" : "4UtoHngomuVaXtj6NAteA$$f_Qq1adTo20NCntRZgmy8",
+    "target" : "fcDi0XPmfPiJ22QYjau1G$$wtmPYYujtN91g4K1eutKY",
+    "targetPort" : "-1-3KPSFUHyHThEHNXTIc$$jFeBemrT8SpzS6Xgbn2Mk"
   } ],
   "processes" : {
     "6nYJTn19bVqbkOcn1dWjW$$JFL4qNeEnulw-A1scEpMv" : {
@@ -133,6 +139,39 @@
         "columnsSelector" : [ "0l5bEteDJK9FKR6zqYX62$$2Qy-FI77TXDqsxpoCrUJo##tiempo_vacio" ]
       }
     },
+    "fcDi0XPmfPiJ22QYjau1G$$wtmPYYujtN91g4K1eutKY" : {
+      "id" : "fcDi0XPmfPiJ22QYjau1G$$wtmPYYujtN91g4K1eutKY",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter_1",
+        "slug" : "Filter_1",
+        "x" : -1250.5249999999999,
+        "y" : -215.99999999999991,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "-1-3KPSFUHyHThEHNXTIc$$jFeBemrT8SpzS6Xgbn2Mk",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "GdqmiBe8at9MUUL20yDBi$$09XAyT0G6O5xhk-UQWXYx",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "-1-3KPSFUHyHThEHNXTIc$$jFeBemrT8SpzS6Xgbn2Mk##division" ],
+        "condition" : {
+          "format" : "sql",
+          "expression" : "division == 'DMH'"
+        }
+      }
+    },
     "Wv2lfVPevUII6N-IqN9Z9$$oOWTQRp0-A0JVNETuQTx8" : {
       "id" : "Wv2lfVPevUII6N-IqN9Z9$$oOWTQRp0-A0JVNETuQTx8",
       "component" : "Source",
@@ -183,6 +222,32 @@
       },
       "properties" : {
         "datasetId" : "3633/datasets/jigsaw_mdt"
+      }
+    },
+    "feNwb3T5sHZa63uQSlIEg$$vBntB-Kj811lCxtmG1cRq" : {
+      "id" : "feNwb3T5sHZa63uQSlIEg$$vBntB-Kj811lCxtmG1cRq",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "diccionario",
+        "slug" : "diccionario",
+        "x" : -1452.25,
+        "y" : -298.7999999999999,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "4UtoHngomuVaXtj6NAteA$$f_Qq1adTo20NCntRZgmy8",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "3633/datasets/diccionario"
       }
     },
     "zAm5FTyATNy8NiudI0lfc$$Mh3JvEMofykPqI17gCUfL" : {

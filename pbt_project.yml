@@ -16,6 +16,7 @@ pipelines:
       inputs:
       - 3633/datasets/jigsaw_mdt
       - 3633/datasets/pisystem_landing
+      - 3633/datasets/diccionario
       outputs: []
     dependencies: {}
 datasets:
@@ -43,6 +44,18 @@ datasets:
         description: ''
         author: yuan.yon@gmail.com
         createdAt: '2022-10-11 18:26:23'
+  datasets/diccionario:
+    name: diccionario
+    description: ''
+    author: yuan.yon@gmail.com
+    createdAt: '2022-10-11 18:57:16'
+    physicalDatasets:
+      dev-databricks-codelco:
+        fabricId: 1084
+        datasetType: Database
+        description: ''
+        author: yuan.yon@gmail.com
+        createdAt: '2022-10-11 18:57:16'
 templates: {}
 jobs: {}
 libraries: []

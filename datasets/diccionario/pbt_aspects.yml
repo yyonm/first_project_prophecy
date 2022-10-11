@@ -1,0 +1,75 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: division
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: server
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: tag
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: units
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: point_type
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: digital_set
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: description
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: digital_mapping
+    type:
+      type: map
+      keyType: string
+      valueType: string
+      valueContainsNull: true
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: aggregation_mapping
+    type:
+      type: map
+      keyType: string
+      valueType: string
+      valueContainsNull: true
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
