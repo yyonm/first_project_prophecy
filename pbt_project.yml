@@ -5,17 +5,6 @@ author: yuan.yon@gmail.com
 language: python
 buildSystem: wheel
 pipelines:
-  pipelines/my_first_pipeline:
-    name: my_first_pipeline
-    description: ''
-    author: yuan.yon@gmail.com
-    mode: batch
-    language: python
-    createdAt: '2022-10-11 15:26:38'
-    datasets:
-      inputs: []
-      outputs: []
-    dependencies: {}
   pipelines/pipeline_1:
     name: pipeline_1
     description: ''
@@ -24,10 +13,23 @@ pipelines:
     language: python
     createdAt: '2022-10-11 15:46:29'
     datasets:
-      inputs: []
+      inputs:
+      - 3633/datasets/jigsaw_mdt
       outputs: []
     dependencies: {}
-datasets: {}
+datasets:
+  datasets/jigsaw_mdt:
+    name: jigsaw_mdt
+    description: ''
+    author: yuan.yon@gmail.com
+    createdAt: '2022-10-11 16:00:21'
+    physicalDatasets:
+      dev-databricks-codelco:
+        fabricId: 1084
+        datasetType: File
+        description: ''
+        author: yuan.yon@gmail.com
+        createdAt: '2022-10-11 16:00:21'
 templates: {}
 jobs: {}
 libraries: []

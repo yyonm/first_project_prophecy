@@ -2,7 +2,7 @@
   "metainfo" : {
     "id" : "1",
     "language" : "python",
-    "fabricId" : "1080",
+    "fabricId" : "1084",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
@@ -37,8 +37,81 @@
     },
     "topLevelPackage" : "pipeline_1"
   },
-  "connections" : [ ],
-  "processes" : { },
+  "connections" : [ {
+    "id" : "uYFjnCP3_JfKGDGUdX39g",
+    "source" : "dCXcYWDQbz1pf7uhvF26J$$dkZ1ux3LA9DedjwvYtwkl",
+    "sourcePort" : "K8XFhdKatRdsidOGVB2P1$$CHnuZexwDrkGvdIY_IBDy",
+    "target" : "VX3ptB8F295W44vBDSb0f$$xhy_VPWOHlXed_Es5o0rw",
+    "targetPort" : "0l5bEteDJK9FKR6zqYX62$$2Qy-FI77TXDqsxpoCrUJo"
+  } ],
+  "processes" : {
+    "VX3ptB8F295W44vBDSb0f$$xhy_VPWOHlXed_Es5o0rw" : {
+      "id" : "VX3ptB8F295W44vBDSb0f$$xhy_VPWOHlXed_Es5o0rw",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "slug" : "Reformat_1",
+        "x" : 280,
+        "y" : 160,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "0l5bEteDJK9FKR6zqYX62$$2Qy-FI77TXDqsxpoCrUJo",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "v0aPPQ-mEHzA6pck1J69_$$l-PRX7Aj2ZXq27zOB1t84",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "importLanguage" : "python",
+        "expressions" : [ {
+          "target" : "tiempo_vacio",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "to_timestamp(tiempo_vacio, 'yyyy-mm-dd HH:mm:ss')"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "0l5bEteDJK9FKR6zqYX62$$2Qy-FI77TXDqsxpoCrUJo##tiempo_vacio" ]
+      }
+    },
+    "dCXcYWDQbz1pf7uhvF26J$$dkZ1ux3LA9DedjwvYtwkl" : {
+      "id" : "dCXcYWDQbz1pf7uhvF26J$$dkZ1ux3LA9DedjwvYtwkl",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "jigsaw_mdt",
+        "slug" : "jigsaw_mdt",
+        "x" : 92,
+        "y" : 154,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "K8XFhdKatRdsidOGVB2P1$$CHnuZexwDrkGvdIY_IBDy",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "datasetId" : "3633/datasets/jigsaw_mdt"
+      }
+    }
+  },
   "ports" : {
     "inputs" : [ ],
     "outputs" : [ ],

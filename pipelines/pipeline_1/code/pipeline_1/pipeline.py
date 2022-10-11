@@ -7,7 +7,8 @@ from prophecy.utils import *
 from pipeline_1.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    pass
+    df_jigsaw_mdt = jigsaw_mdt(spark)
+    df_Reformat_1 = Reformat_1(spark, df_jigsaw_mdt)
 
 def main():
     spark = SparkSession.builder\
