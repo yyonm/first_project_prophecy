@@ -62,17 +62,23 @@
     "target" : "R8-eGC0LbiE7Mjno_TGY2$$5_e9RJD28GHvZgLEcaYhm",
     "targetPort" : "_xbmqVULimoff2pmq5Yif$$sotuGYSGe4sCVeAYDUv87"
   }, {
-    "id" : "UF1tsWOPZeCty7bCJGBya",
-    "source" : "fcDi0XPmfPiJ22QYjau1G$$wtmPYYujtN91g4K1eutKY",
-    "sourcePort" : "GdqmiBe8at9MUUL20yDBi$$09XAyT0G6O5xhk-UQWXYx",
-    "target" : "R8-eGC0LbiE7Mjno_TGY2$$5_e9RJD28GHvZgLEcaYhm",
-    "targetPort" : "trzJbagmFDDkKf1uQRDHc$$Djoxk2Y2hdky4ZCbC4WLU"
-  }, {
     "id" : "2gw0-MdS8Duj49ECB5QQt",
     "source" : "R8-eGC0LbiE7Mjno_TGY2$$5_e9RJD28GHvZgLEcaYhm",
     "sourcePort" : "EXzvg-11ph8VE_9vvzov2$$RIZOJRir-1CrYZmTsQs0I",
     "target" : "3sMI0gq6CVOvRUjvDrcJz$$0Tpt3JuFr5rW-rOzmYgvQ",
     "targetPort" : "QHGoq2O4ALtQPVc_aNX13$$bpl4r9wscbPN_F6PuVap7"
+  }, {
+    "id" : "C_IaFT7VAEEI3QNxamPDp",
+    "source" : "fcDi0XPmfPiJ22QYjau1G$$wtmPYYujtN91g4K1eutKY",
+    "sourcePort" : "GdqmiBe8at9MUUL20yDBi$$09XAyT0G6O5xhk-UQWXYx",
+    "target" : "4vqreBlOMItAWbTBs6c0k$$NoiD7I2pwrUHmNRlm63XB",
+    "targetPort" : "ezxvSzZPTgdtZzQNqtmHo$$Ia0o1GfLaqY0mqF4mpiCT"
+  }, {
+    "id" : "z4b4fb06BQZNuO17t5WU6",
+    "source" : "4vqreBlOMItAWbTBs6c0k$$NoiD7I2pwrUHmNRlm63XB",
+    "sourcePort" : "ZNhpDRQ7r0NLhCYqEAhDc$$775ns_yE1wXWbQ06YJdBf",
+    "target" : "R8-eGC0LbiE7Mjno_TGY2$$5_e9RJD28GHvZgLEcaYhm",
+    "targetPort" : "trzJbagmFDDkKf1uQRDHc$$Djoxk2Y2hdky4ZCbC4WLU"
   } ],
   "processes" : {
     "6nYJTn19bVqbkOcn1dWjW$$JFL4qNeEnulw-A1scEpMv" : {
@@ -163,8 +169,8 @@
       "metadata" : {
         "label" : "Join_1",
         "slug" : "Join_1",
-        "x" : 68.27500000000043,
-        "y" : -210.00000000000006,
+        "x" : 220.6750000000004,
+        "y" : -144.00000000000009,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -305,8 +311,8 @@
       "metadata" : {
         "label" : "pisystem_join_to_delta",
         "slug" : "pisystem_join_to_delta",
-        "x" : 290.2750000000003,
-        "y" : -190.80000000000004,
+        "x" : 430.6750000000003,
+        "y" : -141.60000000000005,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -351,6 +357,164 @@
         "datasetId" : "3633/datasets/diccionario"
       }
     },
+    "4vqreBlOMItAWbTBs6c0k$$NoiD7I2pwrUHmNRlm63XB" : {
+      "id" : "4vqreBlOMItAWbTBs6c0k$$NoiD7I2pwrUHmNRlm63XB",
+      "component" : "SchemaTransform",
+      "metadata" : {
+        "label" : "SchemaTransform_1",
+        "slug" : "SchemaTransform_1",
+        "x" : 34.57708333333352,
+        "y" : -308.8,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ezxvSzZPTgdtZzQNqtmHo$$Ia0o1GfLaqY0mqF4mpiCT",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "ZNhpDRQ7r0NLhCYqEAhDc$$775ns_yE1wXWbQ06YJdBf",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "ezxvSzZPTgdtZzQNqtmHo$$Ia0o1GfLaqY0mqF4mpiCT##units", "ezxvSzZPTgdtZzQNqtmHo$$Ia0o1GfLaqY0mqF4mpiCT##point_type", "ezxvSzZPTgdtZzQNqtmHo$$Ia0o1GfLaqY0mqF4mpiCT##digital_set", "ezxvSzZPTgdtZzQNqtmHo$$Ia0o1GfLaqY0mqF4mpiCT##division", "ezxvSzZPTgdtZzQNqtmHo$$Ia0o1GfLaqY0mqF4mpiCT##description", "ezxvSzZPTgdtZzQNqtmHo$$Ia0o1GfLaqY0mqF4mpiCT##server" ],
+        "transformations" : [ {
+          "kind" : "DropColumn",
+          "DropColumn" : {
+            "sourceColumn" : "division"
+          },
+          "RenameColumn" : {
+            "sourceColumn" : "",
+            "targetColumn" : ""
+          },
+          "AddReplaceColumn" : {
+            "sourceColumn" : "",
+            "expression" : {
+              "expression" : "",
+              "format" : "python"
+            }
+          }
+        }, {
+          "kind" : "DropColumn",
+          "DropColumn" : {
+            "sourceColumn" : "server"
+          },
+          "RenameColumn" : {
+            "sourceColumn" : "",
+            "targetColumn" : ""
+          },
+          "AddReplaceColumn" : {
+            "sourceColumn" : "",
+            "expression" : {
+              "expression" : "",
+              "format" : "python"
+            }
+          }
+        }, {
+          "kind" : "DropColumn",
+          "DropColumn" : {
+            "sourceColumn" : "units"
+          },
+          "RenameColumn" : {
+            "sourceColumn" : "",
+            "targetColumn" : ""
+          },
+          "AddReplaceColumn" : {
+            "sourceColumn" : "",
+            "expression" : {
+              "expression" : "",
+              "format" : "python"
+            }
+          }
+        }, {
+          "kind" : "DropColumn",
+          "DropColumn" : {
+            "sourceColumn" : "point_type"
+          },
+          "RenameColumn" : {
+            "sourceColumn" : "",
+            "targetColumn" : ""
+          },
+          "AddReplaceColumn" : {
+            "sourceColumn" : "",
+            "expression" : {
+              "expression" : "",
+              "format" : "python"
+            }
+          }
+        }, {
+          "kind" : "DropColumn",
+          "DropColumn" : {
+            "sourceColumn" : "digital_set"
+          },
+          "RenameColumn" : {
+            "sourceColumn" : "",
+            "targetColumn" : ""
+          },
+          "AddReplaceColumn" : {
+            "sourceColumn" : "",
+            "expression" : {
+              "expression" : "",
+              "format" : "python"
+            }
+          }
+        }, {
+          "kind" : "DropColumn",
+          "DropColumn" : {
+            "sourceColumn" : "description"
+          },
+          "RenameColumn" : {
+            "sourceColumn" : "",
+            "targetColumn" : ""
+          },
+          "AddReplaceColumn" : {
+            "sourceColumn" : "",
+            "expression" : {
+              "expression" : "",
+              "format" : "python"
+            }
+          }
+        }, {
+          "kind" : "DropColumn",
+          "DropColumn" : {
+            "sourceColumn" : "digital_mapping"
+          },
+          "RenameColumn" : {
+            "sourceColumn" : "",
+            "targetColumn" : ""
+          },
+          "AddReplaceColumn" : {
+            "sourceColumn" : "",
+            "expression" : {
+              "expression" : "",
+              "format" : "python"
+            }
+          }
+        }, {
+          "kind" : "DropColumn",
+          "DropColumn" : {
+            "sourceColumn" : "aggregation_mapping"
+          },
+          "RenameColumn" : {
+            "sourceColumn" : "",
+            "targetColumn" : ""
+          },
+          "AddReplaceColumn" : {
+            "sourceColumn" : "",
+            "expression" : {
+              "expression" : "",
+              "format" : "python"
+            }
+          }
+        } ]
+      }
+    },
     "zAm5FTyATNy8NiudI0lfc$$Mh3JvEMofykPqI17gCUfL" : {
       "id" : "zAm5FTyATNy8NiudI0lfc$$Mh3JvEMofykPqI17gCUfL",
       "component" : "Deduplicate",
@@ -371,10 +535,41 @@
         } ],
         "outputs" : [ {
           "id" : "YEB2lFSNzQJUQ78m0UbM1$$9X2-ecxlBPj5_XX-CiCR5",
-          "slug" : "out"
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "server",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "tag",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "timestamp_ts",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          }
         } ],
         "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : true
       },
       "properties" : {
         "dedupColumns" : [ {

@@ -14,7 +14,8 @@ def pipeline(spark: SparkSession) -> None:
     df_Deduplicate_1 = Deduplicate_1(spark, df_pisystem_landing)
     df_diccionario = diccionario(spark)
     df_Filter_1 = Filter_1(spark, df_diccionario)
-    df_Join_1 = Join_1(spark, df_Filter_1, df_Deduplicate_1)
+    df_SchemaTransform_1 = SchemaTransform_1(spark, df_Filter_1)
+    df_Join_1 = Join_1(spark, df_SchemaTransform_1, df_Deduplicate_1)
     pisystem_join_to_delta(spark, df_Join_1)
 
 def main():
