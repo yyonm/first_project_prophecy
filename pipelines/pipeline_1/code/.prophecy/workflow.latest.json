@@ -44,12 +44,6 @@
     "target" : "VX3ptB8F295W44vBDSb0f$$xhy_VPWOHlXed_Es5o0rw",
     "targetPort" : "0l5bEteDJK9FKR6zqYX62$$2Qy-FI77TXDqsxpoCrUJo"
   }, {
-    "id" : "lprngX4J6vF5u9Ed_89lZ",
-    "source" : "Wv2lfVPevUII6N-IqN9Z9$$oOWTQRp0-A0JVNETuQTx8",
-    "sourcePort" : "RPCT4MhpfeSGY69VwVjlD$$G5fiFR2yGwjgJhzZf555k",
-    "target" : "zAm5FTyATNy8NiudI0lfc$$Mh3JvEMofykPqI17gCUfL",
-    "targetPort" : "HcVFK_Ox7YRMKWXUdp5kw$$f3Y0A3czG1Qe2JqOutF4d"
-  }, {
     "id" : "tWqyUC6xHsXPwftjfNhNd",
     "source" : "feNwb3T5sHZa63uQSlIEg$$vBntB-Kj811lCxtmG1cRq",
     "sourcePort" : "4UtoHngomuVaXtj6NAteA$$f_Qq1adTo20NCntRZgmy8",
@@ -61,12 +55,6 @@
     "sourcePort" : "GdqmiBe8at9MUUL20yDBi$$09XAyT0G6O5xhk-UQWXYx",
     "target" : "4vqreBlOMItAWbTBs6c0k$$NoiD7I2pwrUHmNRlm63XB",
     "targetPort" : "ezxvSzZPTgdtZzQNqtmHo$$Ia0o1GfLaqY0mqF4mpiCT"
-  }, {
-    "id" : "A29br9GulUaBy4I82UY82",
-    "source" : "zAm5FTyATNy8NiudI0lfc$$Mh3JvEMofykPqI17gCUfL",
-    "sourcePort" : "YEB2lFSNzQJUQ78m0UbM1$$9X2-ecxlBPj5_XX-CiCR5",
-    "target" : "U9r8nbTlsfJCnSHg8dqG_$$SPS8e6RZcx5Rh4pgSsaDy",
-    "targetPort" : "mIsFeZl_trHh9rtypHrOi$$PJZ6yMIyZLhtvE2kP_6Fn"
   }, {
     "id" : "uggZm78WqZtDnyM3QASiZ",
     "source" : "4vqreBlOMItAWbTBs6c0k$$NoiD7I2pwrUHmNRlm63XB",
@@ -85,6 +73,12 @@
     "sourcePort" : "lsMXPlm38mUq5j7uxul9l$$FtL2XP6V1zxjRPHmZKsKt",
     "target" : "R8-eGC0LbiE7Mjno_TGY2$$5_e9RJD28GHvZgLEcaYhm",
     "targetPort" : "_xbmqVULimoff2pmq5Yif$$sotuGYSGe4sCVeAYDUv87"
+  }, {
+    "id" : "WiCGamovg3x1CRrob3yuJ",
+    "source" : "Wv2lfVPevUII6N-IqN9Z9$$oOWTQRp0-A0JVNETuQTx8",
+    "sourcePort" : "RPCT4MhpfeSGY69VwVjlD$$G5fiFR2yGwjgJhzZf555k",
+    "target" : "U9r8nbTlsfJCnSHg8dqG_$$SPS8e6RZcx5Rh4pgSsaDy",
+    "targetPort" : "mIsFeZl_trHh9rtypHrOi$$PJZ6yMIyZLhtvE2kP_6Fn"
   } ],
   "processes" : {
     "6nYJTn19bVqbkOcn1dWjW$$JFL4qNeEnulw-A1scEpMv" : {
@@ -195,7 +189,7 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "columnsSelector" : [ "mIsFeZl_trHh9rtypHrOi$$PJZ6yMIyZLhtvE2kP_6Fn##tag" ],
+        "columnsSelector" : [ "mIsFeZl_trHh9rtypHrOi$$PJZ6yMIyZLhtvE2kP_6Fn##timestamp", "mIsFeZl_trHh9rtypHrOi$$PJZ6yMIyZLhtvE2kP_6Fn##tag" ],
         "transformations" : [ {
           "kind" : "RenameColumn",
           "RenameColumn" : {
@@ -204,6 +198,22 @@
           },
           "DropColumn" : {
             "sourceColumn" : ""
+          },
+          "AddReplaceColumn" : {
+            "sourceColumn" : "",
+            "expression" : {
+              "expression" : "",
+              "format" : "python"
+            }
+          }
+        }, {
+          "kind" : "DropColumn",
+          "DropColumn" : {
+            "sourceColumn" : "timestamp"
+          },
+          "RenameColumn" : {
+            "sourceColumn" : "",
+            "targetColumn" : ""
           },
           "AddReplaceColumn" : {
             "sourceColumn" : "",
@@ -435,7 +445,7 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "columnsSelector" : [ "ezxvSzZPTgdtZzQNqtmHo$$Ia0o1GfLaqY0mqF4mpiCT##units", "ezxvSzZPTgdtZzQNqtmHo$$Ia0o1GfLaqY0mqF4mpiCT##point_type", "ezxvSzZPTgdtZzQNqtmHo$$Ia0o1GfLaqY0mqF4mpiCT##digital_set", "ezxvSzZPTgdtZzQNqtmHo$$Ia0o1GfLaqY0mqF4mpiCT##division", "ezxvSzZPTgdtZzQNqtmHo$$Ia0o1GfLaqY0mqF4mpiCT##description", "ezxvSzZPTgdtZzQNqtmHo$$Ia0o1GfLaqY0mqF4mpiCT##server" ],
+        "columnsSelector" : [ "ezxvSzZPTgdtZzQNqtmHo$$Ia0o1GfLaqY0mqF4mpiCT##description", "ezxvSzZPTgdtZzQNqtmHo$$Ia0o1GfLaqY0mqF4mpiCT##server", "ezxvSzZPTgdtZzQNqtmHo$$Ia0o1GfLaqY0mqF4mpiCT##division" ],
         "transformations" : [ {
           "kind" : "DropColumn",
           "DropColumn" : {
@@ -456,54 +466,6 @@
           "kind" : "DropColumn",
           "DropColumn" : {
             "sourceColumn" : "server"
-          },
-          "RenameColumn" : {
-            "sourceColumn" : "",
-            "targetColumn" : ""
-          },
-          "AddReplaceColumn" : {
-            "sourceColumn" : "",
-            "expression" : {
-              "expression" : "",
-              "format" : "python"
-            }
-          }
-        }, {
-          "kind" : "DropColumn",
-          "DropColumn" : {
-            "sourceColumn" : "units"
-          },
-          "RenameColumn" : {
-            "sourceColumn" : "",
-            "targetColumn" : ""
-          },
-          "AddReplaceColumn" : {
-            "sourceColumn" : "",
-            "expression" : {
-              "expression" : "",
-              "format" : "python"
-            }
-          }
-        }, {
-          "kind" : "DropColumn",
-          "DropColumn" : {
-            "sourceColumn" : "point_type"
-          },
-          "RenameColumn" : {
-            "sourceColumn" : "",
-            "targetColumn" : ""
-          },
-          "AddReplaceColumn" : {
-            "sourceColumn" : "",
-            "expression" : {
-              "expression" : "",
-              "format" : "python"
-            }
-          }
-        }, {
-          "kind" : "DropColumn",
-          "DropColumn" : {
-            "sourceColumn" : "digital_set"
           },
           "RenameColumn" : {
             "sourceColumn" : "",
@@ -565,72 +527,6 @@
             }
           }
         } ]
-      }
-    },
-    "zAm5FTyATNy8NiudI0lfc$$Mh3JvEMofykPqI17gCUfL" : {
-      "id" : "zAm5FTyATNy8NiudI0lfc$$Mh3JvEMofykPqI17gCUfL",
-      "component" : "Deduplicate",
-      "metadata" : {
-        "label" : "Deduplicate_1",
-        "slug" : "Deduplicate_1",
-        "x" : -142.2,
-        "y" : -133.59999999999997,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "HcVFK_Ox7YRMKWXUdp5kw$$f3Y0A3czG1Qe2JqOutF4d",
-          "slug" : "in0"
-        } ],
-        "outputs" : [ {
-          "id" : "YEB2lFSNzQJUQ78m0UbM1$$9X2-ecxlBPj5_XX-CiCR5",
-          "slug" : "out",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "server",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "tag",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "timestamp_ts",
-              "type" : "timestamp",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          }
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : true
-      },
-      "properties" : {
-        "dedupColumns" : [ {
-          "colName" : "tag"
-        } ],
-        "dedupType" : "unique_only",
-        "columnsSelector" : [ "HcVFK_Ox7YRMKWXUdp5kw$$f3Y0A3czG1Qe2JqOutF4d##tag" ],
-        "orders" : [ ],
-        "useOrderBy" : false
       }
     }
   },
