@@ -1,0 +1,24 @@
+name: first_project_prophecy
+description: ''
+version: 0.0.1
+author: yuan.yon@gmail.com
+language: python
+buildSystem: wheel
+pipelines:
+  pipelines/my_first_pipeline:
+    name: my_first_pipeline
+    description: ''
+    author: yuan.yon@gmail.com
+    mode: batch
+    language: python
+    createdAt: '2022-10-11 15:26:38'
+    datasets:
+      inputs: []
+      outputs: []
+    dependencies: {}
+datasets: {}
+templates: {}
+jobs: {}
+libraries: []
+subgraphs: {}
+dependencies: []
