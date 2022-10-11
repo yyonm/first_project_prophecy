@@ -9,6 +9,7 @@ from pipeline_1.graph import *
 def pipeline(spark: SparkSession) -> None:
     df_jigsaw_mdt = jigsaw_mdt(spark)
     df_Reformat_1 = Reformat_1(spark, df_jigsaw_mdt)
+    DeltaTableOperations_1(spark)
 
 def main():
     spark = SparkSession.builder\

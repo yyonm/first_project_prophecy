@@ -91,8 +91,8 @@
       "metadata" : {
         "label" : "jigsaw_mdt",
         "slug" : "jigsaw_mdt",
-        "x" : 92,
-        "y" : 154,
+        "x" : 62,
+        "y" : 184,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -109,6 +109,48 @@
       },
       "properties" : {
         "datasetId" : "3633/datasets/jigsaw_mdt"
+      }
+    },
+    "6nYJTn19bVqbkOcn1dWjW$$JFL4qNeEnulw-A1scEpMv" : {
+      "id" : "6nYJTn19bVqbkOcn1dWjW$$JFL4qNeEnulw-A1scEpMv",
+      "component" : "DeltaTableOperations",
+      "metadata" : {
+        "label" : "DeltaTableOperations_1",
+        "slug" : "DeltaTableOperations_1",
+        "x" : 303.1999999999998,
+        "y" : 321.99999999999994,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false
+      },
+      "properties" : {
+        "database" : "",
+        "path" : "dbfs:/mnt/refined/dmh/operaciones/jigsaw/vistas/var_agg_1_hr/OUT",
+        "updateCondition" : null,
+        "restoreValue" : null,
+        "vaccumRetainNumHours" : null,
+        "useOptimiseZOrder" : true,
+        "tableName" : "",
+        "restoreVia" : null,
+        "optimiseWhere" : null,
+        "updateTableExpressions" : [ ],
+        "useExternalFilePath" : true,
+        "deleteCondition" : {
+          "format" : "sql",
+          "expression" : "true"
+        },
+        "optimiseZOrderColumns" : [ {
+          "colName" : "tiempo_vacio"
+        } ],
+        "useOptimiseWhere" : false,
+        "action" : "optimiseTable"
       }
     }
   },
