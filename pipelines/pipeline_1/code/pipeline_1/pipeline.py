@@ -1,14 +1,13 @@
 from pyspark.sql import *
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
-from my_first_pipeline.config.ConfigStore import *
-from my_first_pipeline.udfs.UDFs import *
+from pipeline_1.config.ConfigStore import *
+from pipeline_1.udfs.UDFs import *
 from prophecy.utils import *
-from my_first_pipeline.graph import *
+from pipeline_1.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_Source_0 = Source_0(spark)
-    Target_1(spark)
+    pass
 
 def main():
     spark = SparkSession.builder\
@@ -19,8 +18,8 @@ def main():
                 .getOrCreate()\
                 .newSession()
     Utils.initializeFromArgs(spark, parse_args())
-    spark.conf.set("prophecy.metadata.pipeline.uri", "3633/pipelines/my_first_pipeline")
-    MetricsCollector.start(spark = spark, pipelineId = "3633/pipelines/my_first_pipeline")
+    spark.conf.set("prophecy.metadata.pipeline.uri", "3633/pipelines/pipeline_1")
+    MetricsCollector.start(spark = spark, pipelineId = "3633/pipelines/pipeline_1")
     pipeline(spark)
     MetricsCollector.end(spark)
 

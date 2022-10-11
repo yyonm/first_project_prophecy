@@ -16,6 +16,17 @@ pipelines:
       inputs: []
       outputs: []
     dependencies: {}
+  pipelines/pipeline_1:
+    name: pipeline_1
+    description: ''
+    author: yuan.yon@gmail.com
+    mode: batch
+    language: python
+    createdAt: '2022-10-11 15:46:29'
+    datasets:
+      inputs: []
+      outputs: []
+    dependencies: {}
 datasets: {}
 templates: {}
 jobs: {}
