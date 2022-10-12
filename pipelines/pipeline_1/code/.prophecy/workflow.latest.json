@@ -334,7 +334,7 @@
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "script" : "def timezone_from_timestamp(column_name):\r\n  return (concat(\r\n          lit(\"GMT\"),\r\n          regexp_extract(column_name, \"(\\+|\\-)\\d+:\\d+$\", 1),\r\n          hour(regexp_extract(column_name, \"(\\d+:\\d+)$\", 1))))\r\n\r\n# out0 = in0.withColumn(\"timestamp_func\", from_utc_timestamp(col(\"timestamp\").cast(\"timestamp\"), timezone_from_timestamp(col(\"timestamp\"))))\r\nout0 = in0.withColumn(\"dummy\", lit('dummy'))\r\n",
+        "script" : "in0.withColumn(\"timestamp_func\", fa.lit('timestamp_func'))\r\n\r\n",
         "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
         "scriptMethodFooter" : "    return out0"
       }
