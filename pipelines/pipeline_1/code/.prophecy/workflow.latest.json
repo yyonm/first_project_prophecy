@@ -22,7 +22,10 @@
       "instances" : { },
       "selected" : "default"
     },
-    "sparkConf" : [ ],
+    "sparkConf" : [ {
+      "name" : "spark.databricks.delta.schema.autoMerge.enabled",
+      "value" : "true"
+    } ],
     "hadoopConf" : [ ],
     "codeMode" : "sparse",
     "buildSystem" : "maven",

@@ -27,6 +27,7 @@ def main():
                 .getOrCreate()\
                 .newSession()
     Utils.initializeFromArgs(spark, parse_args())
+    spark.conf.set("spark.databricks.delta.schema.autoMerge.enabled", "true")
     spark.conf.set("prophecy.metadata.pipeline.uri", "3633/pipelines/pipeline_1")
     MetricsCollector.start(spark = spark, pipelineId = "3633/pipelines/pipeline_1")
     pipeline(spark)
