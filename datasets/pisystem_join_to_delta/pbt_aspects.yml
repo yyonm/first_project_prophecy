@@ -32,7 +32,7 @@ schema:
       tags: []
   - name: server
     type: string
-    nullable: false
+    nullable: true
     metadata:
       description: ''
       mappings: []
@@ -95,6 +95,13 @@ schema:
       tags: []
   - name: fecha
     type: date
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: timestamp_func
+    type: timestamp
     nullable: true
     metadata:
       description: ''

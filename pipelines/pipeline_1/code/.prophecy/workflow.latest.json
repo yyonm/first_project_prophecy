@@ -77,15 +77,15 @@
     "target" : "U9r8nbTlsfJCnSHg8dqG_$$SPS8e6RZcx5Rh4pgSsaDy",
     "targetPort" : "mIsFeZl_trHh9rtypHrOi$$PJZ6yMIyZLhtvE2kP_6Fn"
   }, {
-    "id" : "fQ2z0GO_D2toNpcbMdwWB",
+    "id" : "xSr17V6HyALIV8g7c5AiH",
     "source" : "U9r8nbTlsfJCnSHg8dqG_$$SPS8e6RZcx5Rh4pgSsaDy",
     "sourcePort" : "lsMXPlm38mUq5j7uxul9l$$FtL2XP6V1zxjRPHmZKsKt",
     "target" : "_BQbCtlE0YpQYZOiMyHHg$$Ni5YeeGhMKv8wJZ1aXT6G",
-    "targetPort" : "xONv--Gr_ZWDZ5OS4u44p$$qk60wWKmX9rfN9zFuNeEQ"
+    "targetPort" : "GZYf2pabjJTfBGQlFPtID$$tgozUdFdYjM3lywGeskDs"
   }, {
-    "id" : "fWX6S22Z1I1vLcH0i25a2",
+    "id" : "2ezIfCLmTRCMM5FO5J7EA",
     "source" : "_BQbCtlE0YpQYZOiMyHHg$$Ni5YeeGhMKv8wJZ1aXT6G",
-    "sourcePort" : "7QKNqeDE3PX2CcZXMFxfs$$TNTm6-J-20SjcaA6TLc1o",
+    "sourcePort" : "umeH2BmJURPA8S6cdyU9G$$Rtx4xZWwaCD5oVbv_tAJu",
     "target" : "R8-eGC0LbiE7Mjno_TGY2$$5_e9RJD28GHvZgLEcaYhm",
     "targetPort" : "_xbmqVULimoff2pmq5Yif$$sotuGYSGe4sCVeAYDUv87"
   } ],
@@ -314,8 +314,8 @@
       "metadata" : {
         "label" : "to_timestamp",
         "slug" : "to_timestamp",
-        "x" : 42.11979166666677,
-        "y" : -146.4,
+        "x" : 22.919791666666782,
+        "y" : -152.4,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -323,18 +323,18 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "xONv--Gr_ZWDZ5OS4u44p$$qk60wWKmX9rfN9zFuNeEQ",
+          "id" : "GZYf2pabjJTfBGQlFPtID$$tgozUdFdYjM3lywGeskDs",
           "slug" : "in0"
         } ],
         "outputs" : [ {
-          "id" : "7QKNqeDE3PX2CcZXMFxfs$$TNTm6-J-20SjcaA6TLc1o",
+          "id" : "umeH2BmJURPA8S6cdyU9G$$Rtx4xZWwaCD5oVbv_tAJu",
           "slug" : "out0"
         } ],
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false
       },
       "properties" : {
-        "script" : "in0.withColumn(\"timestamp_func\", fa.lit('timestamp_func'))\r\n\r\n",
+        "script" : "def timezone_from_timestamp(column_name):\r\n  return (concat(\r\n          lit(\"GMT\"),\r\n          regexp_extract(column_name, \"(\\+|\\-)\\d+:\\d+$\", 1),\r\n          hour(regexp_extract(column_name, \"(\\d+:\\d+)$\", 1))))\r\n\t\t  \r\nout0 = in0.withColumn(\"timestamp_func\", from_utc_timestamp(col(\"timestamp\").cast(\"timestamp\"), timezone_from_timestamp(col(\"timestamp\"))))\r\nreturn out0",
         "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
         "scriptMethodFooter" : "    return out0"
       }
