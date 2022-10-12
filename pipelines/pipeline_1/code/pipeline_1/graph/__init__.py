@@ -3,7 +3,6 @@ from .Filter_1 import *
 from .jigsaw_mdt import *
 from .SchemaTransform_1 import *
 from .optimize_refined_jigsaw import *
-from .to_timestamp import *
 from .reformat_tiempo_vacio import *
 from .pisystem_join_to_delta import *
 from .diccionario import *

@@ -15,8 +15,7 @@ def pipeline(spark: SparkSession) -> None:
     df_diccionario = diccionario(spark)
     df_Filter_1 = Filter_1(spark, df_diccionario)
     df_SchemaTransform_1 = SchemaTransform_1(spark, df_Filter_1)
-    df_to_timestamp = to_timestamp(spark, df_SchemaTransform_2)
-    df_Join_1 = Join_1(spark, df_SchemaTransform_1, df_to_timestamp)
+    df_Join_1 = Join_1(spark, df_SchemaTransform_1, df_SchemaTransform_2)
     pisystem_join_to_delta(spark, df_Join_1)
 
 def main():

@@ -77,15 +77,9 @@
     "target" : "U9r8nbTlsfJCnSHg8dqG_$$SPS8e6RZcx5Rh4pgSsaDy",
     "targetPort" : "mIsFeZl_trHh9rtypHrOi$$PJZ6yMIyZLhtvE2kP_6Fn"
   }, {
-    "id" : "xSr17V6HyALIV8g7c5AiH",
+    "id" : "1K59q39KwuCtsubkIuba9",
     "source" : "U9r8nbTlsfJCnSHg8dqG_$$SPS8e6RZcx5Rh4pgSsaDy",
     "sourcePort" : "lsMXPlm38mUq5j7uxul9l$$FtL2XP6V1zxjRPHmZKsKt",
-    "target" : "_BQbCtlE0YpQYZOiMyHHg$$Ni5YeeGhMKv8wJZ1aXT6G",
-    "targetPort" : "GZYf2pabjJTfBGQlFPtID$$tgozUdFdYjM3lywGeskDs"
-  }, {
-    "id" : "2ezIfCLmTRCMM5FO5J7EA",
-    "source" : "_BQbCtlE0YpQYZOiMyHHg$$Ni5YeeGhMKv8wJZ1aXT6G",
-    "sourcePort" : "umeH2BmJURPA8S6cdyU9G$$Rtx4xZWwaCD5oVbv_tAJu",
     "target" : "R8-eGC0LbiE7Mjno_TGY2$$5_e9RJD28GHvZgLEcaYhm",
     "targetPort" : "_xbmqVULimoff2pmq5Yif$$sotuGYSGe4sCVeAYDUv87"
   } ],
@@ -306,37 +300,6 @@
           "format" : "sql",
           "expression" : "division == 'DMH'"
         }
-      }
-    },
-    "_BQbCtlE0YpQYZOiMyHHg$$Ni5YeeGhMKv8wJZ1aXT6G" : {
-      "id" : "_BQbCtlE0YpQYZOiMyHHg$$Ni5YeeGhMKv8wJZ1aXT6G",
-      "component" : "Script",
-      "metadata" : {
-        "label" : "to_timestamp",
-        "slug" : "to_timestamp",
-        "x" : 22.919791666666782,
-        "y" : -152.4,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "GZYf2pabjJTfBGQlFPtID$$tgozUdFdYjM3lywGeskDs",
-          "slug" : "in0"
-        } ],
-        "outputs" : [ {
-          "id" : "umeH2BmJURPA8S6cdyU9G$$Rtx4xZWwaCD5oVbv_tAJu",
-          "slug" : "out0"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false
-      },
-      "properties" : {
-        "script" : "def timezone_from_timestamp(column_name):\r\n  return (concat(\r\n          lit(\"GMT\"),\r\n          regexp_extract(column_name, \"(\\+|\\-)\\d+:\\d+$\", 1),\r\n          hour(regexp_extract(column_name, \"(\\d+:\\d+)$\", 1))))\r\n\t\t  \r\nout0 = in0.withColumn(\"timestamp_func\", from_utc_timestamp(col(\"timestamp\").cast(\"timestamp\"), timezone_from_timestamp(col(\"timestamp\"))))\r\nreturn out0",
-        "scriptMethodHeader" : "def Script(spark: SparkSession, in0: DataFrame) -> DataFrame:",
-        "scriptMethodFooter" : "    return out0"
       }
     },
     "Wv2lfVPevUII6N-IqN9Z9$$oOWTQRp0-A0JVNETuQTx8" : {
