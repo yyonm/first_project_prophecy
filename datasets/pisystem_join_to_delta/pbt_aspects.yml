@@ -44,6 +44,13 @@ schema:
       description: ''
       mappings: []
       tags: []
+  - name: timestamp
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
   - name: timestamp_ts
     type: timestamp
     nullable: true
