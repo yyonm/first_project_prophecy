@@ -5,18 +5,15 @@ from pipeline_1.config.ConfigStore import *
 from pipeline_1.udfs.UDFs import *
 
 def to_timestamp(spark: SparkSession, in0: DataFrame) -> DataFrame:
-    from pyspark.sql import functions as fa
 
     def timezone_from_timestamp(column_name):
-        return (fa.concat(
-            fa.lit("GMT"),
-            fa.regexp_extract(column_name, "(\+|\-)\d+:\d+$", 1),
-            fa.hour(fa.regexp_extract(column_name, "(\d+:\d+)$", 1))
+        return (concat(
+            lit("GMT"),
+            regexp_extract(column_name, "(\+|\-)\d+:\d+$", 1),
+            hour(regexp_extract(column_name, "(\d+:\d+)$", 1))
         ))
 
-    out0 = in0.withColumn(
-        'timestamp_func',
-        fa.from_utc_timestamp(fa.col('timestamp').cast('timestamp'), timezone_from_timestamp(fa.col('timestamp')))
-    )
+    # out0 = in0.withColumn("timestamp_func", from_utc_timestamp(col("timestamp").cast("timestamp"), timezone_from_timestamp(col("timestamp"))))
+    out0 = in0.withColumn("dummy", lit('dummy'))
 
     return out0

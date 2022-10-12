@@ -100,9 +100,9 @@ schema:
       description: ''
       mappings: []
       tags: []
-  - name: timestamp_func
-    type: timestamp
-    nullable: true
+  - name: dummy
+    type: string
+    nullable: false
     metadata:
       description: ''
       mappings: []
