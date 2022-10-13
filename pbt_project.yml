@@ -70,7 +70,30 @@ datasets:
         author: yuan.yon@gmail.com
         createdAt: '2022-10-11 19:18:45'
 templates: {}
-jobs: {}
+jobs:
+  jobs/job_1:
+    name: job_1
+    description: ''
+    fabricUID: 1084
+    scheduler:
+      Databricks: {}
+    jobSize: small
+    scheduleCron: 0 0/3 * * * ? *
+    timeout: null
+    alerting:
+      emails: yyonm001@codelco.cl
+      onStart: true
+      onSuccess: true
+      onFailure: false
+    pipelines:
+    - 3633/pipelines/pipeline_1
+    jobClusterMode:
+      clusterMode:
+        Multi: {}
+      clusterId: null
+    enabled: true
+    createdAt: '2022-10-13 12:42:37'
+    author: yuan.yon@gmail.com
 libraries: []
 subgraphs: {}
 dependencies: []

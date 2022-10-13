@@ -1,0 +1,94 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "1084",
+    "jobId" : "3633/jobs/job_1",
+    "name" : "job_1",
+    "schedule" : "0 0/3 * * * ? *",
+    "enabled" : true,
+    "defaultClusterSize" : "small",
+    "alerting" : {
+      "emails" : "yyonm001@codelco.cl",
+      "onStart" : true,
+      "onSuccess" : true,
+      "onFailure" : false
+    },
+    "processDefaultSettings" : {
+      "type" : "Inherited",
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      }
+    },
+    "availableFabrics" : [ {
+      "id" : "1080",
+      "name" : "dev",
+      "clusterSizes" : {
+        "default" : "Small",
+        "availableClusterSizes" : [ "Small" ]
+      }
+    }, {
+      "id" : "1084",
+      "name" : "dev-databricks-codelco",
+      "clusterSizes" : {
+        "default" : "small",
+        "availableClusterSizes" : [ "small" ]
+      }
+    } ]
+  },
+  "processes" : {
+    "n4uklNiwKD0zy1Bd8XamU$$fuKKcpg3kWdj6v9yOkvMa" : {
+      "id" : "n4uklNiwKD0zy1Bd8XamU$$fuKKcpg3kWdj6v9yOkvMa",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "Pipeline_0",
+        "slug" : "Pipeline_0",
+        "x" : 141.1999969482422,
+        "y" : 79.5999984741211
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "e6XNDi3x0boC2GZVETef6$$WYPUT7lDpP2ZoaVVdSj-G"
+        } ],
+        "outputs" : [ {
+          "id" : "iwurfUHKkkzeBwI5yn9mx$$xzmKY7MIfhEM2R-uOpXyX"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "3633/pipelines/pipeline_1",
+        "configurations" : {
+          "schema" : [ {
+            "name" : "variable_1",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : ""
+            }
+          } ],
+          "instances" : [ "default" ],
+          "overrides" : { },
+          "selectedInstance" : "default"
+        }
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "FacvAQ6ZVNgXNn1VAWbjo",
+    "source" : "n4uklNiwKD0zy1Bd8XamU$$fuKKcpg3kWdj6v9yOkvMa",
+    "target" : "1EwHaR_e5VOmxyjG-wITX$$h2k3t9n8MO9wSFPO1o2uL",
+    "sourcePort" : "iwurfUHKkkzeBwI5yn9mx$$xzmKY7MIfhEM2R-uOpXyX",
+    "targetPort" : "jUktuC0lLawqIN-vGCJj1$$mthcjw1M1xl_iojbMu_XX"
+  } ]
+}

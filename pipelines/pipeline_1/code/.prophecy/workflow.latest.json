@@ -16,7 +16,14 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ ]
+        "fields" : [ {
+          "name" : "variable_1",
+          "kind" : {
+            "type" : "string",
+            "value" : null
+          },
+          "optional" : false
+        } ]
       },
       "fabrics" : { },
       "instances" : { },
