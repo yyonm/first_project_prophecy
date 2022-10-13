@@ -1,6 +1,6 @@
 name: first_project_prophecy
 description: ''
-version: 0.0.1
+version: 1.0.0
 author: yuan.yon@gmail.com
 language: python
 buildSystem: wheel
